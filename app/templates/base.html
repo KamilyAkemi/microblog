@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color:  #287f87;
+} 
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    padding: 5px;
+    position: relative;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    text-align: none;
+    display: block;
+    align-items: center;
+    padding: 50px 55px;
+    font-size: 20px;
+}
+
+ul li:hover {
+    background-color: #287f87;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #287f87;
+}
+
+ul ul li {
+    padding: 3px;
+    width: 300px;
+    height: 100px;
+    display: block;
+}
+
+ul li:hover > ul {
+    display: inherit;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 140px; 
+    height: 140px; 
+    margin-right: 60px; 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.card {
+    border: 1px solid #287f87;
+    border-radius: 8px;
+    margin: 10px;
+    overflow: hidden;
+    width: 750px;
+}
+
+.card-animation {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    animation-name: example;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+
+h2{ font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: #287f87;
+    text-align: center;
+
+}
+.button-style {
+    background-color: #287f87;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+    
+}
+.card-content {
+    text-align: center;
+}
+
+footer {
+  background-color: #287f87;
+  color: #ffffff;
+  font-family: Arial, sans serif;
+  height: 37px;
+  padding: 1px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKC</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <nav>
+    
+      <ul>
+        <li class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+        </li>
+        <li>
+            <a href="/index">Home</a>
+        </li>
+          <li>
+              <a href="/dados">Dados ▾</a>
+              <ul class="dropdown">
+                <li><a href="buscar.html">Buscar</a></li>
+                  </ul>
+          </li>
+          <li>
+              <a href="/login">Login ▾</a>
+              <ul class="dropdown">
+                  <li><a href="contatos.html">Adicionar dados</a></li>
+                  <li><a href="buscar.html">Sair</a></li>
+              </ul>
+          </li>
+          <li><a href="/contatos">Contatos</a>
+            <ul class="dropdown">
+                <li><a href="contatos.html">E-mail</a></li>
+                <li><a href="https://api.whatsapp.com/send/?phone=%2B5511994894561&text&type=phone_number&app_absent=0" target="NOVA JANELA">WhatsApp</a></li>  
+            </ul>
+        </li> 
+    </ul>
+    </nav>
+    <footer>
+        <p>&copy; 2023 JKCLab</p>
+    </footer>
+
+    {% block conteudo %}
+    {% endblock %}
+</body>
+</html>
+            
